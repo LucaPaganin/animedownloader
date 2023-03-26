@@ -1,7 +1,9 @@
 import subprocess as sp
 from pathlib import Path
-import re, time
+import re, time, sys, logging
 from queue import Queue
+
+logger = logging.getLogger(__name__)
 
 epno_regex = re.compile(r"(?:[eE][pP][_\-])(\d+)(?:-\d+)?")
 
@@ -40,3 +42,18 @@ class TimeoutQueue(Queue):
                     self.all_tasks_done.wait(remaining)
         finally:
             self.all_tasks_done.release()
+
+def configure_logger(logger_: logging.Logger, loglevel, logfile: str = None):
+    if not logger_.hasHandlers():
+        logFormatter = logging.Formatter("%(asctime)s [%(threadName)s] [%(levelname)s] %(message)s")
+        logger_.setLevel(loglevel)
+        if logfile is not None:
+            fileHandler = logging.FileHandler(logfile)
+            fileHandler.setFormatter(logFormatter)
+            logger_.addHandler(fileHandler)
+
+        consoleHandler = logging.StreamHandler(sys.stdout)
+        consoleHandler.setFormatter(logFormatter)
+        logger_.addHandler(consoleHandler)
+    else:
+        logger.info(f"logger {logger_.name} already configured: it has handlers {logger_.handlers}")
