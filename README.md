@@ -15,7 +15,7 @@ poetry install
 ```python
 import logging
 from pathlib import Path
-from animedownloader import configure_logger, getNavigator, getSupportedSites, Downloader
+from anime_autodownloader import configure_logger, getNavigator, getSupportedSites, Downloader
 
 loglevel = logging.INFO
 logger = logging.getLogger()
