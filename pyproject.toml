@@ -1,10 +1,12 @@
 [tool.poetry]
 name = "anime-autodownloader"
-version = "0.0.1"
+version = "0.0.3"
+readme = "README.md"
 description = "A package for downloading animes automatically from a given streaming website"
 authors = ["Luca Paganin"]
 license = "MIT License"
 homepage = "https://github.com/LucaPaganin/animedownloader"
+repository = "https://github.com/LucaPaganin/animedownloader"
 
 
 [tool.poetry.dependencies]

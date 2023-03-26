@@ -3,12 +3,18 @@ A package for automatically download animes. For now supported websites are
 - AnimeUnity: https://animeunity.tv
 
 ## Installation
+To install from PyPI simple type
+```
+pip install anime-autodownloader
+```
+
 ### From source code
 - You need first to install poetry https://python-poetry.org/docs/#installation
 - Then clone this repository, go inside it and type the command 
 ```
 poetry install
 ```
+
 
 ## Usage
 
