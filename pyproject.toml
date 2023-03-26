@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "animedownloader"
+version = "0.0.1"
+description = "A package for downloading animes automatically from a given streaming website"
+authors = ["Luca Paganin"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.2"
+selenium = "^4.8.2"
+uuid-by-string = "^0.1.0"
+filelock = "^3.10.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.2"
+jupyterlab = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
