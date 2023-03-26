@@ -2,6 +2,12 @@
 A package for automatically download animes. For now supported websites are
 - AnimeUnity: https://animeunity.tv
 
+## Dependencies
+### ffmpeg
+This package depends on `ffprobe` command, which is used to verify video integrity after the download of the given video has finished. This command is part of the `ffmpeg` library. In order to install it, please see [here](https://ffmpeg.org/download.html)
+### Google chrome
+This package works automating browser actions on the website designated for downloading the contents. At the moment of writing, only Google Chrome browser is supported, and this means that Chrome must be installed on your computer.
+
 ## Installation
 To install from PyPI simple type
 ```
