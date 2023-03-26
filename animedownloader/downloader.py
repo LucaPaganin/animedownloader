@@ -175,9 +175,9 @@ class Downloader(object):
             self.queue.join_with_timeout(timeout=timeout)
         except TimeoutError:
             logger.warning(f"queue join timed out")
+        self._finish_download_flag.set()
         self.stopWorkers()
         logger.info(f"download_files elapsed time: {time.time()-t0:.2f} s")
-        self._finish_download_flag.set()
     
     def download_files(self, urls, timeout=7200, blocking=True):
         # Create the output directory if it doesn't exist
