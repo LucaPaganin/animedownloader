@@ -1,4 +1,4 @@
-# animedownloader
+# anime-autodownloader
 A package for automatically download animes. For now supported websites are
 - AnimeUnity: https://animeunity.tv
 

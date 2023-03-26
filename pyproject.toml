@@ -1,9 +1,13 @@
 [tool.poetry]
-name = "animedownloader"
+name = "anime-autodownloader"
 version = "0.0.1"
 description = "A package for downloading animes automatically from a given streaming website"
 authors = ["Luca Paganin"]
 license = "MIT License"
+
+[tool.poetry.metadata]
+url = "https://"
+homepage = "https://example.com/mypackage"
 
 [tool.poetry.dependencies]
 python = "^3.10"
