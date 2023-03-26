@@ -6,8 +6,8 @@ authors = ["Luca Paganin"]
 license = "MIT License"
 
 [tool.poetry.metadata]
-url = "https://"
-homepage = "https://example.com/mypackage"
+url = "https://github.com/LucaPaganin/animedownloader"
+homepage = "https://github.com/LucaPaganin/animedownloader"
 
 [tool.poetry.dependencies]
 python = "^3.10"
